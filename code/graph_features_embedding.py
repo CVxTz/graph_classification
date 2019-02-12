@@ -194,7 +194,7 @@ model.load_weights("graph_model_2.h5", by_name=True)
 early = EarlyStopping(monitor="val_acc", patience=10000, restore_best_weights=True)
 
 model.fit([X_train, X_train_2, X_G_train], Y_train, validation_data=([X_val, X_val_2, X_G_val], Y_val),
-          nb_epoch=1000, verbose=2, callbacks=[early])
+          nb_epoch=5000, verbose=2, callbacks=[early])
 
 Y_test_pred = model.predict([X_test, X_test_2, X_G_test])
 Y_test_pred = Y_test_pred.argmax(axis=-1).ravel()
