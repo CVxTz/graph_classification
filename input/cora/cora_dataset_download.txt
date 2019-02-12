@@ -1,0 +1,2 @@
+Download the cora dataset from this link : https://linqs.soe.ucsc.edu/data
+unzip the files in the folder input/cora

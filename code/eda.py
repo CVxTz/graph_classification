@@ -69,9 +69,9 @@ for c in content_data:
 print(len(train_samples), len(val_samples), len(test_samples))
 
 
-# json.dump(train_samples, open("../input/%s/%s.train.json"%(dataset, dataset), 'w'), indent=4)
-# json.dump(val_samples, open("../input/%s/%s.val.json"%(dataset, dataset), 'w'), indent=4)
-# json.dump(test_samples, open("../input/%s/%s.test.json"%(dataset, dataset), 'w'), indent=4)
-# json.dump(edges_lines, open("../input/%s/%s.graph.json"%(dataset, dataset), 'w'), indent=4)
-# json.dump((class_int_mapping, node_int_mapping, node_int_class_mapping, node_class_mapping),
-#           open("../input/%s/%s.mappings.json"%(dataset, dataset), 'w'), indent=4)
+json.dump(train_samples, open("../input/%s/%s.train.json"%(dataset, dataset), 'w'), indent=4)
+json.dump(val_samples, open("../input/%s/%s.val.json"%(dataset, dataset), 'w'), indent=4)
+json.dump(test_samples, open("../input/%s/%s.test.json"%(dataset, dataset), 'w'), indent=4)
+json.dump(edges_lines, open("../input/%s/%s.graph.json"%(dataset, dataset), 'w'), indent=4)
+json.dump((class_int_mapping, node_int_mapping, node_int_class_mapping, node_class_mapping),
+          open("../input/%s/%s.mappings.json"%(dataset, dataset), 'w'), indent=4)
