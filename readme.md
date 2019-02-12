@@ -1,6 +1,16 @@
+## Steps to run =>
+* Download the cora dataset from this link : https://linqs.soe.ucsc.edu/data
+* unzip the files in the folder input/cora
+* cd code
+* python eda.py
+* python word_features_only.py \# for baseline model 53.28% accuracy
+* python graph_embedding.py \# for model_1 73.06% accuracy
+* python graph_features_embedding.py \# for model_2 76.35% accuracy
+
 # Learning from Graph data using Keras and Tensorflow
 
 ![](https://cdn-images-1.medium.com/max/2600/1*KwAHRcw6QZ_SCxNWMi0JHA.png)
+
 <span class="figcaption_hack">Cora Data set Citation Graph</span>
 
 ### Motivation :
@@ -45,6 +55,7 @@ extract features from the graph to help classify new nodes.
 **Baseline Model :**
 
 ![](https://cdn-images-1.medium.com/max/1600/1*nlDeQPW2ABhtwjoSI2dvWQ.png)
+
 <span class="figcaption_hack">Simple Baseline Model</span>
 
 We first experiment with the simplest model that learn to predict node classes
@@ -65,6 +76,7 @@ the shortest path length between two input nodes like detailed on the figure and
 code snippet below :
 
 ![](https://cdn-images-1.medium.com/max/1600/1*PP_y_YhkKFYpzkj7szhnaw.png)
+
 <span class="figcaption_hack">Learning an embedding vector for each node</span>
 
 The next step is to use the pre-trained node embedding as input to the
@@ -75,6 +87,7 @@ vectors.
 The resulting classification network is described in the following figure :
 
 ![](https://cdn-images-1.medium.com/max/1600/1*xc99u2ejelSXNPKPmh-Nrw.png)
+
 <span class="figcaption_hack">Using pretrained embeddings to do node classification</span>
 
 #### **Graph embedding classification model Accuracy : 73.06%**

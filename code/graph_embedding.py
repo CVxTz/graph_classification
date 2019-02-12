@@ -115,12 +115,12 @@ train, test = train_test_split(edges_lines, test_size=0.05)
 
 model_g = get_graph_embedding_model(len(node_int_mapping))
 
-# early = EarlyStopping(monitor="val_loss", patience=50, restore_best_weights=True)
-#
-# model_g.fit_generator(gen(train, node_int_mapping), validation_data=gen(test, node_int_mapping), nb_epoch=500, verbose=2,
-#                     callbacks=[early], steps_per_epoch=1000, validation_steps=100)
-#
-# model_g.save_weights("graph_model_1.h5")
+early = EarlyStopping(monitor="val_loss", patience=50, restore_best_weights=True)
+
+model_g.fit_generator(gen(train, node_int_mapping), validation_data=gen(test, node_int_mapping), nb_epoch=500, verbose=2,
+                    callbacks=[early], steps_per_epoch=1000, validation_steps=100)
+
+model_g.save_weights("graph_model_1.h5")
 
 model_g.load_weights("graph_model_1.h5")
 
