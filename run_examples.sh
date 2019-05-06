@@ -1,4 +1,4 @@
-wget -c -Oinput/ https://linqs-data.soe.ucsc.edu/public/lbc/cora.tgz
+wget -c -Oinput/cora.tgz https://linqs-data.soe.ucsc.edu/public/lbc/cora.tgz
 cd input
 tar -zxvf cora.tgz
 cd ../code

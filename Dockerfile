@@ -24,7 +24,7 @@ ENV HOME /root
 # Define working directory.
 WORKDIR /root
 
-RUN pip3 install keras theano tensorflow matplotlib networkx 
+RUN pip3 install theano tensorflow 
 
 RUN pip3 install -r requirements.txt
 
